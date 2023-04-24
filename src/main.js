@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 import Vconsole from 'vconsole';
 import wpkReporter from 'wpk-reporter' // 导入基础sdk
+import Vant from 'vant';
 
 const __wpk = new wpkReporter({
   bid: 'x8ii0114-3vp6z95w', // 新建应用时确定
@@ -18,6 +19,8 @@ const __wpk = new wpkReporter({
 const vConsole = new Vconsole();
 
 Vue.use(vConsole);
+Vue.use(Vant)
+
 Vue.config.productionTip = false;
 
 new Vue({

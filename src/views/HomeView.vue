@@ -5,6 +5,8 @@
       <source src="../assets/test2.mp4">
       <p>对不起，你的浏览器不支持video元素，请点击这里下载最新版本的浏览器</p>
     </video>
+
+    <div class="feedback-box"></div>
     <!-- <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" /> -->
   </div>
@@ -13,6 +15,7 @@
 <script>
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
+import { toWxLogin } from '@/service/login'
 
 export default {
   name: "HomeView",
@@ -27,6 +30,9 @@ export default {
   },
 
   mounted() {
+    // 跳转登录
+    toWxLogin();
+    
     const that = this;
     this.handleVedioSize();
     window.onresize = () => {
@@ -75,5 +81,9 @@ html,
 .home video {
   object-fit: fill;
   object-fit: cover;
+}
+
+.feedback-box {
+  /* wid */
 }
 </style>
