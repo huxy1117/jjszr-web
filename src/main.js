@@ -3,8 +3,9 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import Vconsole from 'vconsole';
-import wpkReporter from 'wpk-reporter' // 导入基础sdk
+import wpkReporter from 'wpk-reporter'; // 导入基础sdk
 import Vant from 'vant';
+import 'vant/lib/index.css';
 
 const __wpk = new wpkReporter({
   bid: 'x8ii0114-3vp6z95w', // 新建应用时确定

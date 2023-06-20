@@ -15,12 +15,12 @@ module.exports = defineConfig({
     // },
     proxy: {
       '/api': {
-        target: 'http://104.194.243.237:10086/',
+        target: 'http://124.207.4.197:8082/',
         ws: true,
         changeOrigin: true,
         pathRewrite: {
           // 路径重写
-           "^/api": "/" 
+          //  "^/wecom": "/wecom" 
         }       
       },
     }

@@ -16,19 +16,20 @@ export default {
     const code = getParam('code')
     console.warn('code', code)
 
-    if (!code && url) {
+    if (code && url) {
       // 登录
       login({
         code,
       })
         .then((res) => {
           console.warn('res', res)
-          // if (res.data.errCode && res.data.errMsg !== '') {
-          //   Toast(res.data.errMsg)
-          // } else if (res.data.openId && res.data.openId !== '') {
-          //   initLogin(res.data.openId) // 缓存登录态
-          //   window.location.href = url // 重定向到原页面
-          // }
+          if (res.data.retcode === '00') {
+            console.warn('res.data.data.UserId', res.data.data.UserId, url);
+            initLogin(res.data.data.UserId) // 缓存登录态
+            window.location.href = url // 重定向到原页面
+          } else {
+            Toast(`${res.data.retcode}${res.data.errmsg}`);
+          }
         })
         .catch((err) => {
           Toast(err)

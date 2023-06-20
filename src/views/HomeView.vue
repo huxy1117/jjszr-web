@@ -31,7 +31,8 @@ export default {
 
   mounted() {
     // 跳转登录
-    toWxLogin();
+    // todo: 登录需放开
+    // toWxLogin();
     
     const that = this;
     this.handleVedioSize();

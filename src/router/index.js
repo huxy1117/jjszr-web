@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import CommonView from "../views/CommonView.vue";
 
 Vue.use(VueRouter);
 
@@ -9,6 +10,11 @@ const routes = [
     path: "/detail",
     name: "home",
     component: HomeView,
+  },
+  {
+    path: "/common",
+    name: "common",
+    component: CommonView,
   },
   {
     path: "/about",

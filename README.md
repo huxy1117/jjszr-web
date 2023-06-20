@@ -1,4 +1,4 @@
-# jjsir-web
+# jjszr-web
 
 ## Project setup
 ```
